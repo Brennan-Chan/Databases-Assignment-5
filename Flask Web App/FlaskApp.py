@@ -14,6 +14,7 @@ def index():
     tasks = {
         'Task 1': 'Brennan',
         'Task 2': 'Micheal',
+        'Task 3': 'Daniela',
         # Add more tasks and assignees here
     }
     return render_template('HomePage.html', contributors=contributors, tasks=tasks)
