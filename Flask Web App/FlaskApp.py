@@ -8,6 +8,7 @@ def index():
         'Brennan': 'Developer',
         'Micheal': 'Developer',
         'Nathan': 'Developer',
+        'Daniela': 'Developer',
         # Add more contributors and roles here
     }
     tasks = {
