@@ -14,16 +14,10 @@ import sys
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
-db_config = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'N!n@T@z',
-    'database': 'sakila',
-    'auth_plugin':'mysql_native_password',
-}
-
+# Note: this uses your credentials. Make sure you have the sakila db installed via MySQLWorkbench, and use everything below,
+# replacing `YOUR PASSWORD` with your root password.
 def get_db_connection():
-    connection = mysql.connector.connect(host = 'localhost', user = 'root', password = 'N!n@T@z', database = 'sakila', auth_plugin = 'auth_plugin')
+    connection = mysql.connector.connect(host = 'localhost', user = 'root', password = 'YOUR_PASSAORD', database = 'sakila', auth_plugin = 'auth_plugin')
     return connection
 
 
@@ -54,7 +48,6 @@ def index():
         if mydb.is_connected():
             print("Connected to MySQL database")
 
-        # Proceed with your code here
 
     except mysql.connector.Error as e:
         print("Error connecting to MySQL database:", e)
